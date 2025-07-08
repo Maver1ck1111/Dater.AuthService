@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj": {}
+    "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj": {}
   },
   "projects": {
     "D:\\Dater\\Dater.Auth\\Dater.Auth.Application\\Dater.Auth.Application.csproj": {
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -136,14 +142,14 @@
         }
       }
     },
-    "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj": {
+    "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj",
-        "projectName": "Dater.Auth.WebApi",
-        "projectPath": "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj",
+        "projectUniqueName": "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj",
+        "projectName": "Dater.Auth.Infrastracture",
+        "projectPath": "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj",
         "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
-        "outputPath": "D:\\Dater\\Dater.Auth\\Dater.Auth\\obj\\",
+        "outputPath": "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -182,9 +188,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[1.20.1, )"
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
@@ -199,9 +205,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

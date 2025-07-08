@@ -11,13 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ab048c83-d6e7-424e-b369-40508f496c88")]
-[assembly: System.Reflection.AssemblyCompanyAttribute("Dater.Auth.WebApi")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Dater.Auth.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1aeed49c14a49ab601e9dc328a260b93ff3efda4")]
-[assembly: System.Reflection.AssemblyProductAttribute("Dater.Auth.WebApi")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Dater.Auth.WebApi")]
+[assembly: System.Reflection.AssemblyProductAttribute("Dater.Auth.Application")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Dater.Auth.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
