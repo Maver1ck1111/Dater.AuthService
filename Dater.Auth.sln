@@ -3,7 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dater.Auth", "Dater.Auth\Dater.Auth.csproj", "{571614FD-0D3C-4C5A-AF15-3F28BB1545DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dater.Auth.WebApi", "Dater.Auth\Dater.Auth.WebApi.csproj", "{571614FD-0D3C-4C5A-AF15-3F28BB1545DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{7396C265-0468-46AD-ADD6-6F34C28F5F2D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dater.Auth.Domain", "Dater.Auth.Domain\Dater.Auth.Domain.csproj", "{EDA0994E-A1D7-4A77-B745-9AF9E585255B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dater.Auth.Application", "Dater.Auth.Application\Dater.Auth.Application.csproj", "{8FDFB006-1670-4FD8-A699-C3AAD1AB6CE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dater.Auth.Infrastracture", "Dater.Auth.Infrastracture\Dater.Auth.Infrastracture.csproj", "{A35336EA-0BA0-4D0A-B141-A8ACFE364418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dater.Auth.Test", "Dater.Auth.Test\Dater.Auth.Test.csproj", "{1123B2A4-B9AD-4477-8873-4B7CF732E506}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +28,22 @@ Global
 		{571614FD-0D3C-4C5A-AF15-3F28BB1545DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{571614FD-0D3C-4C5A-AF15-3F28BB1545DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{571614FD-0D3C-4C5A-AF15-3F28BB1545DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDA0994E-A1D7-4A77-B745-9AF9E585255B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA0994E-A1D7-4A77-B745-9AF9E585255B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA0994E-A1D7-4A77-B745-9AF9E585255B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA0994E-A1D7-4A77-B745-9AF9E585255B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FDFB006-1670-4FD8-A699-C3AAD1AB6CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDFB006-1670-4FD8-A699-C3AAD1AB6CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDFB006-1670-4FD8-A699-C3AAD1AB6CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDFB006-1670-4FD8-A699-C3AAD1AB6CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A35336EA-0BA0-4D0A-B141-A8ACFE364418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35336EA-0BA0-4D0A-B141-A8ACFE364418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35336EA-0BA0-4D0A-B141-A8ACFE364418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35336EA-0BA0-4D0A-B141-A8ACFE364418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1123B2A4-B9AD-4477-8873-4B7CF732E506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1123B2A4-B9AD-4477-8873-4B7CF732E506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1123B2A4-B9AD-4477-8873-4B7CF732E506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1123B2A4-B9AD-4477-8873-4B7CF732E506}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

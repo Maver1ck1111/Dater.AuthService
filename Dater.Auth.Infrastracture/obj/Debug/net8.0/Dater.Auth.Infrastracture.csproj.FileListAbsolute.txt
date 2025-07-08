@@ -1,0 +1,17 @@
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\bin\Debug\net8.0\Dater.Auth.Infrastracture.deps.json
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\bin\Debug\net8.0\Dater.Auth.Infrastracture.dll
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\bin\Debug\net8.0\Dater.Auth.Infrastracture.pdb
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\bin\Debug\net8.0\Dater.Auth.Application.dll
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\bin\Debug\net8.0\Dater.Auth.Domain.dll
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\bin\Debug\net8.0\Dater.Auth.Application.pdb
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\bin\Debug\net8.0\Dater.Auth.Domain.pdb
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.csproj.AssemblyReference.cache
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.AssemblyInfoInputs.cache
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.AssemblyInfo.cs
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.csproj.CoreCompileInputs.cache
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Au.89EC9A3F.Up2Date
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.dll
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\refint\Dater.Auth.Infrastracture.dll
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.pdb
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\ref\Dater.Auth.Infrastracture.dll

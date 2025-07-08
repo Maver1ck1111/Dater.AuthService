@@ -4,7 +4,12 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AuthDbHost": "localhost",
+        "AuthDbPort": "5432",
+        "AuthDbUsername": "postgres",
+        "AuthDbPassword": "1234",
+        "AuthDbName": "Accounts"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5185"
@@ -13,7 +18,12 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AuthDbHost": "localhost",
+        "AuthDbPort": "5432",
+        "AuthDbUsername": "postgres",
+        "AuthDbPassword": "1234",
+        "AuthDbName": "Accounts"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7278;http://localhost:5185"

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Dater.Auth.WebApi.props" />
+</Project>

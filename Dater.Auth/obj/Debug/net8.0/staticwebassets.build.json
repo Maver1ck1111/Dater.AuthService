@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "L7t6GKZKBR8Um2WKQ4HfRMQr2LEorTU2jkdBUsh8aXo=",
+  "Source": "Dater.Auth.WebApi",
+  "BasePath": "_content/Dater.Auth.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

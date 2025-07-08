@@ -1,0 +1,15 @@
+D:\Dater\Dater.Auth\Dater.Auth.Application\bin\Debug\net8.0\Dater.Auth.Application.deps.json
+D:\Dater\Dater.Auth\Dater.Auth.Application\bin\Debug\net8.0\Dater.Auth.Application.dll
+D:\Dater\Dater.Auth\Dater.Auth.Application\bin\Debug\net8.0\Dater.Auth.Application.pdb
+D:\Dater\Dater.Auth\Dater.Auth.Application\bin\Debug\net8.0\Dater.Auth.Domain.dll
+D:\Dater\Dater.Auth\Dater.Auth.Application\bin\Debug\net8.0\Dater.Auth.Domain.pdb
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.csproj.AssemblyReference.cache
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.AssemblyInfoInputs.cache
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.AssemblyInfo.cs
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.csproj.CoreCompileInputs.cache
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Au.C7B0C724.Up2Date
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.dll
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\refint\Dater.Auth.Application.dll
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.pdb
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\ref\Dater.Auth.Application.dll

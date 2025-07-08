@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -136,14 +142,14 @@
         }
       }
     },
-    "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj": {
+    "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj",
-        "projectName": "Dater.Auth.WebApi",
-        "projectPath": "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj",
+        "projectUniqueName": "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj",
+        "projectName": "Dater.Auth.Infrastracture",
+        "projectPath": "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj",
         "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
-        "outputPath": "D:\\Dater\\Dater.Auth\\Dater.Auth\\obj\\",
+        "outputPath": "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -182,9 +188,95 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj",
+        "projectName": "Dater.Auth.WebApi",
+        "projectPath": "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj",
+        "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
+        "outputPath": "D:\\Dater\\Dater.Auth\\Dater.Auth\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Dater\\Dater.Auth\\Dater.Auth.Application\\Dater.Auth.Application.csproj": {
+                "projectPath": "D:\\Dater\\Dater.Auth\\Dater.Auth.Application\\Dater.Auth.Application.csproj"
+              },
+              "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj": {
+                "projectPath": "D:\\Dater\\Dater.Auth\\Dater.Auth.Infrastracture\\Dater.Auth.Infrastracture.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.20.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
