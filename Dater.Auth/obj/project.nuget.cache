@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xI1DcafSbHY=",
+  "success": true,
+  "projectFilePath": "D:\\Dater\\Dater.Auth\\Dater.Auth\\Dater.Auth.WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\test\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.20.1\\microsoft.visualstudio.azure.containers.tools.targets.1.20.1.nupkg.sha512"
+  ],
+  "logs": []
+}
