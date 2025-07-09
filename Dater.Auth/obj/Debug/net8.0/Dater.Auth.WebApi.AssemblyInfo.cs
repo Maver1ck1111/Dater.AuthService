@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dater.Auth.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a724c0bd59f816ccfd98c4c5f55ffd7f99a6d0c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16fc816a53df9282f3446b797ece71b6668892ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dater.Auth.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dater.Auth.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

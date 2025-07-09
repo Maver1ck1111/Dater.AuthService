@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dater.Auth.Application.ServicesContracts
 {
-    internal interface IJWTService
+    public interface IJWTService
     {
+        string GenerateToken(string email);
+        string GenerateRefreshToken();
     }
 }

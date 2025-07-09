@@ -54,3 +54,11 @@ D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Dater.Auth.Infrastracture.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Dater.Auth.Infrastracture.pdb
 D:\Dater\Dater.Auth\Dater.Auth\obj\Debug\net8.0\Dater.Auth.WebApi.sourcelink.json
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

@@ -2196,8 +2196,10 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Dater.Auth.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.15",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2"
         },
         "compile": {
           "bin/placeholder/Dater.Auth.Application.dll": {}
