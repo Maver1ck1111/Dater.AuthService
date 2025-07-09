@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bnwJQYY4tCM=",
+  "dgSpecHash": "v+YQ32lOJhE=",
   "success": true,
   "projectFilePath": "D:\\Dater\\Dater.Auth\\Dater.Auth.Test\\Dater.Auth.Test.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\test\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\test\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\test\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\test\\.nuget\\packages\\fluentassertions\\8.4.0\\fluentassertions.8.4.0.nupkg.sha512",

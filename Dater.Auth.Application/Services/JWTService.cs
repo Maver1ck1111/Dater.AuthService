@@ -20,6 +20,7 @@ namespace Dater.Auth.Application.Services
         public JWTService(IConfiguration configuration, ILogger<JWTService> logger)
         {
             _configuration = configuration;
+            _logger = logger;
         }
         public string GenerateRefreshToken()
         {
@@ -28,6 +29,8 @@ namespace Dater.Auth.Application.Services
             {
                 rng.GetBytes(randomBytes);
             }
+
+            _logger.LogInformation("Was successfully created a refresh token");
 
             return Convert.ToBase64String(randomBytes);
         }
@@ -51,6 +54,8 @@ namespace Dater.Auth.Application.Services
                 expires: DateTime.UtcNow.AddMinutes(int.Parse(_configuration["JWT:ExpireMinutes"])),
                 signingCredentials: signingCredentials
             );
+
+            _logger.LogInformation("Was successfully created a access token for {email} expires at {expires}", email, jwtSecurityToken.ValidTo);
 
             return new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
         }

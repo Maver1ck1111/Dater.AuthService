@@ -16,6 +16,14 @@
           "Dater.Auth.Infrastracture.dll": {}
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.15": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
@@ -247,6 +255,7 @@
       },
       "Dater.Auth.Application/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "Dater.Auth.Domain": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.15",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
@@ -272,6 +281,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.15": {
       "type": "package",

@@ -12,5 +12,6 @@ namespace Dater.Auth.Domain
         public string Email { get; set; } = null!;
         public string HashedPassword { get; set; } = null!;
         public string? RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiryTime { get; set; }
     }
 }

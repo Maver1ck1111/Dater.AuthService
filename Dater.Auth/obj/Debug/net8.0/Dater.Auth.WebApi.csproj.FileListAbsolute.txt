@@ -62,3 +62,4 @@ D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Protocol
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\BCrypt.Net-Next.dll
