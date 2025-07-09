@@ -275,6 +275,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Dater.Auth.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "compile": {

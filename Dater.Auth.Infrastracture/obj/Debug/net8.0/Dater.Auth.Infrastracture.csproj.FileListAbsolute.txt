@@ -15,3 +15,4 @@ D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infras
 D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\refint\Dater.Auth.Infrastracture.dll
 D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.pdb
 D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\ref\Dater.Auth.Infrastracture.dll
+D:\Dater\Dater.Auth\Dater.Auth.Infrastracture\obj\Debug\net8.0\Dater.Auth.Infrastracture.sourcelink.json

@@ -13,3 +13,4 @@ D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Applicati
 D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\refint\Dater.Auth.Application.dll
 D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.pdb
 D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\ref\Dater.Auth.Application.dll
+D:\Dater\Dater.Auth\Dater.Auth.Application\obj\Debug\net8.0\Dater.Auth.Application.sourcelink.json

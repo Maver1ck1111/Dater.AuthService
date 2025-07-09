@@ -125,3 +125,4 @@ D:\Dater\Dater.Auth\Dater.Auth.Test\bin\Debug\net8.0\Moq.dll
 D:\Dater\Dater.Auth\Dater.Auth.Test\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
 D:\Dater\Dater.Auth\Dater.Auth.Test\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
 D:\Dater\Dater.Auth\Dater.Auth.Test\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll
+D:\Dater\Dater.Auth\Dater.Auth.Test\obj\Debug\net8.0\Dater.Auth.Test.sourcelink.json

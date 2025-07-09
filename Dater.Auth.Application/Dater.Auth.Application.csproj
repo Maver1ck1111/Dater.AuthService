@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Dater.Auth.Domain\Dater.Auth.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Новая папка\" />
+  </ItemGroup>
+
 </Project>

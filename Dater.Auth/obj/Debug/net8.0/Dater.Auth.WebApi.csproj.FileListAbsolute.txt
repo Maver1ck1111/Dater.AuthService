@@ -53,3 +53,4 @@ D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Serilog.Sinks.File.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Dater.Auth.Infrastracture.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Dater.Auth.Infrastracture.pdb
+D:\Dater\Dater.Auth\Dater.Auth\obj\Debug\net8.0\Dater.Auth.WebApi.sourcelink.json
