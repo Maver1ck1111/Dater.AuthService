@@ -37,7 +37,7 @@ namespace Dater.Auth.Infrastracture
             if (affectedRows > 0)
             {
                 _logger.LogInformation("Account with ID {AccountId} and email {Email} added successfully.", account.AccountID, account.Email);
-                return Result<Guid>.OnSuccess(account.AccountID);
+                return Result<Guid>.OnSuccess(account.AccountID, 201);
             }
 
             _logger.LogError("Failed to add account with email {Email}. No rows affected.", account.Email);

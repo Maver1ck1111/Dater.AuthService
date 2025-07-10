@@ -41,7 +41,7 @@ namespace Dater.Auth.Test
 
             Result<Guid> addResult = await repository.AddAsync(account);
 
-            addResult.StatusCode.Should().Be(200);
+            addResult.StatusCode.Should().Be(201);
             addResult.Value.Should().NotBe(Guid.Empty);
         }
 
