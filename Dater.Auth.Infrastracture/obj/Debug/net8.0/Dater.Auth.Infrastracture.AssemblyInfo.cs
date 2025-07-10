@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dater.Auth.Infrastracture")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dbdf4bc64f1f6e55ed743805101c9be37cbd6bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+beda6e877faa3b3e46fae70a4b7efd6025462a09")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dater.Auth.Infrastracture")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dater.Auth.Infrastracture")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

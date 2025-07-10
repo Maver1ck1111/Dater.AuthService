@@ -44,6 +44,10 @@ namespace Dater.Auth.Test
                 .Setup(x => x.GetByEmailAsync(It.IsAny<string>()))
                 .ReturnsAsync(Result<Account>.OnSuccess(account));
 
+            _accountRepositoryMock
+                .Setup(x => x.UpdateAsync(It.IsAny<Account>()))
+                .ReturnsAsync(Result<bool>.OnSuccess(true));
+
             _hasherServiceMock
                 .Setup(x => x.VerifyPassword(It.IsAny<string>(), It.IsAny<string>()))
                 .Returns(true);
