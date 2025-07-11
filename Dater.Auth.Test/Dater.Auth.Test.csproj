@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Dater.Auth.Domain\Dater.Auth.Domain.csproj" />
     <ProjectReference Include="..\Dater.Auth.Infrastracture\Dater.Auth.Infrastracture.csproj" />
+    <ProjectReference Include="..\Dater.Auth\Dater.Auth.WebApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>

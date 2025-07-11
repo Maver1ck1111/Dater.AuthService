@@ -14,6 +14,8 @@ namespace Dater.Auth.Application
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IJWTService, JWTService>();
+            services.AddScoped<IHasherService, HasherService>();
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }
