@@ -115,6 +115,18 @@ namespace Dater.Auth.Application.Services
             string newRefreshToken = _jwtService.GenerateRefreshToken();
             string jwtToken = _jwtService.GenerateToken(email);
 
+            Account updatedAccount = resultAccount.Value;
+            updatedAccount.RefreshToken = refreshToken;
+            updatedAccount.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+
+            Result<bool> updated = await _accountRepository.UpdateAsync(updatedAccount);
+
+            if (updated.StatusCode != 200)
+            {
+                _logger.LogError("Failed to update account with email {Email}.", email);
+                return Result<AccountResponseDTO>.OnError(updated.StatusCode, updated.ErrorMessage);
+            }
+
             return Result<AccountResponseDTO>.OnSuccess(new AccountResponseDTO
             {
                 Email = email,
