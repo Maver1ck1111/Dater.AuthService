@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Dater.Auth.Application.DTOs
 {
-    internal class RefreshTokenDTO
+    public class RefreshTokenDTO
     {
+        public string Email { get; set; } = null!;
+        public string RefreshToken { get; set; } = null!;
     }
 }

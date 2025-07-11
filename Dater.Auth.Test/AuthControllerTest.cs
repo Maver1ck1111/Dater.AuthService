@@ -6,6 +6,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,17 +42,17 @@ namespace Dater.Auth.Test
 
             var result = await authController.Login(requestDTO);
 
-            result.Should().BeOfType<OkObjectResult>();
+            var value = result.Value as AccountResponseDTO;
 
-            result.Value.Should().NotBeNull();
+            value.Should().NotBeNull();
 
-            result.Value.Email.Should().Be(requestDTO.Email);
-            result.Value.AccessToken.Should().NotBeNullOrEmpty();
-            result.Value.RefreshToken.Should().NotBeNullOrEmpty();
+            value.Email.Should().Be(requestDTO.Email);
+            value.AccessToken.Should().NotBeNullOrEmpty();
+            value.RefreshToken.Should().NotBeNullOrEmpty();
         }
 
         [Fact]
-        public async Task Login_ShouldReturnNotFoundError_UserNotFound()
+        public async Task Login_ShouldReturn404NotFoundError_UserNotFound()
         {
             AccountRequestDTO requestDTO = new AccountRequestDTO()
             {
@@ -67,8 +68,11 @@ namespace Dater.Auth.Test
 
             var result = await authController.Login(requestDTO);
 
-            result.Should().BeOfType<NotFoundObjectResult>();
-            result.Value.Should().Be("User not found");
+            result.Result.Should().BeOfType<NotFoundObjectResult>();
+
+            var notFoundResult = result.Result as NotFoundObjectResult;
+
+            notFoundResult.Value.Should().Be("User not found.");
         }
 
         [Fact]
@@ -87,14 +91,95 @@ namespace Dater.Auth.Test
             AuthController authController = new AuthController(_authService.Object, _logger.Object);
             var result = await authController.Login(requestDTO);
 
-            result.Should().BeOfType<UnauthorizedObjectResult>();
-            result.Value.Should().Be("Incorrect password");
+            result.Result.Should().BeOfType<UnauthorizedObjectResult>();
+
+            var unauthorizedResult = result.Result as UnauthorizedObjectResult;
+
+            unauthorizedResult.Value.Should().Be("Incorrect password.");
         }
 
         [Fact]
         public async Task Register_ShouldReturnCorrectResponse()
         {
+            AccountRequestDTO requestDTO = new AccountRequestDTO()
+            {
+                Email = "someEmail@mail.com",
+                Password = "password1234"
+            };
 
+            _authService
+                .Setup(x => x.Register(It.IsAny<AccountRequestDTO>()))
+                .ReturnsAsync(Result<AccountResponseDTO>.OnSuccess(new AccountResponseDTO
+                {
+                    Email = requestDTO.Email,
+                    AccessToken = "jwtToken",
+                    RefreshToken = "refreshToken"
+                }));
+
+            AuthController authController = new AuthController(_authService.Object, _logger.Object);
+
+            var result = await authController.Register(requestDTO);
+            
+            var value = result.Value as AccountResponseDTO;
+
+            value.Should().NotBeNull();
+            value.Email.Should().Be(requestDTO.Email);
+            value.AccessToken.Should().NotBeNullOrEmpty();
+            value.RefreshToken.Should().NotBeNullOrEmpty();
+        }
+
+        [Fact]
+        public async Task RefreshToken_ShouldReturnCorrectResponse()
+        {
+            RefreshTokenDTO refreshTokenDTO = new RefreshTokenDTO
+            {
+                Email = "someEmail@mail.com",
+                RefreshToken = "refreshToken1234"
+            };
+
+            _authService
+                .Setup(x => x.RefreshTokens(refreshTokenDTO.Email, refreshTokenDTO.RefreshToken))
+                .ReturnsAsync(Result<AccountResponseDTO>.OnSuccess(new AccountResponseDTO
+                {
+                    Email = refreshTokenDTO.Email,
+                    AccessToken = "newJwtToken",
+                    RefreshToken = "newRefreshToken"
+                }));
+
+            AuthController authController = new AuthController(_authService.Object, _logger.Object);
+
+            var result = await authController.Refresh(refreshTokenDTO);
+
+            var value = result.Value as AccountResponseDTO;
+
+            value.Should().NotBeNull();
+            value.Email.Should().Be(refreshTokenDTO.Email);
+            value.AccessToken.Should().NotBeNullOrEmpty();
+            value.RefreshToken.Should().NotBeNullOrEmpty();
+        }
+
+        [Fact]
+        public async Task RefreshToken_ShouldReturn401Unathorized_InvalidRefreshToken()
+        {
+            RefreshTokenDTO refreshTokenDTO = new RefreshTokenDTO
+            {
+                Email = "someEmail@mail.com",
+                RefreshToken = "invalidToken1234"
+            };
+
+            _authService
+               .Setup(x => x.RefreshTokens(refreshTokenDTO.Email, refreshTokenDTO.RefreshToken))
+               .ReturnsAsync(Result<AccountResponseDTO>.OnError(401, "Refresh token isnt match"));
+
+            AuthController authController = new AuthController(_authService.Object, _logger.Object);
+
+            var result = await authController.Refresh(refreshTokenDTO);
+
+            result.Result.Should().BeOfType<UnauthorizedObjectResult>();
+
+            var value = result.Result as UnauthorizedObjectResult;
+
+            value.Value.Should().Be("Incorrect refresh token or expire time.");
         }
     }
 }

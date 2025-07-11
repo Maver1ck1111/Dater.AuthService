@@ -63,3 +63,7 @@ D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Protocol
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\FluentValidation.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\Dater\Dater.Auth\Dater.Auth\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Dater\Dater.Auth\Dater.Auth\obj\Debug\net8.0\Dater.Auth.WebApi.MvcApplicationPartsAssemblyInfo.cs

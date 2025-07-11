@@ -294,6 +294,10 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Serilog.Sinks.Seq": {
               "target": "Package",
               "version": "[8.0.0, )"
