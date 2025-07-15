@@ -38,6 +38,14 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
+
 builder.Services.AddAuthorization();
 
 builder.Services.AddInfrastructureServices();
@@ -46,6 +54,7 @@ builder.Services.AddApplicationServices();
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthentication();
 

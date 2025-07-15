@@ -39,6 +39,7 @@ namespace Dater.Auth.WebApi.Controllers
             return result.Value;
         }
 
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<ActionResult<AccountResponseDTO>> Register(AccountRequestDTO requestDTO)
         {
@@ -50,9 +51,16 @@ namespace Dater.Auth.WebApi.Controllers
                 return BadRequest("Invalid registration request.");
             }
 
+            if(result.StatusCode == 409)
+            {
+                _logger.LogError("User with email {Email} already exists.", requestDTO.Email);
+                return Conflict("User with this email already exists.");
+            }
+
             return result.Value;
         }
 
+        [AllowAnonymous]
         [HttpPost("refresh")]
         public async Task<ActionResult<AccountResponseDTO>> Refresh(RefreshTokenDTO refreshToken)
         {

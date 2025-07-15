@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dater.Auth.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b84a91323bff5a1c11f5fc32cf7b7a09ac05d00a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd99f5eaaddc0d7198d31324f59fe54e4ded840f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dater.Auth.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dater.Auth.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

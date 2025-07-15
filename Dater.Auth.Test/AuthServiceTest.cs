@@ -150,6 +150,10 @@ namespace Dater.Auth.Test
                 .Setup(x => x.AddAsync(It.IsAny<Account>()))
                 .ReturnsAsync(Result<Guid>.OnSuccess(Guid.NewGuid(), 201));
 
+            _accountRepositoryMock
+                .Setup(x => x.GetByEmailAsync(It.IsAny<string>()))
+                .ReturnsAsync(Result<Account>.OnError(404, "User not found"));
+
             _jwtServiceMock
                 .Setup(x => x.GenerateRefreshToken())
                 .Returns("someRefreshToken1235");
@@ -180,6 +184,29 @@ namespace Dater.Auth.Test
         }
 
         [Fact]
+        public async Task Register_ShouldReturn409Response_UserAlreadyExist()
+        {
+            _accountRepositoryMock
+                .Setup(x => x.GetByEmailAsync(It.IsAny<string>()))
+                .ReturnsAsync(Result<Account>.OnSuccess(new Account()));
+
+            var AuthService = new AuthService(
+               _hasherServiceMock.Object,
+               _jwtServiceMock.Object,
+               _accountRepositoryMock.Object,
+               _loggerMock.Object
+            );
+
+            AccountRequestDTO requestDTO = new AccountRequestDTO
+            {
+                Email = "Email@mail.com",
+                Password = "wrongPassword12345"
+            };
+
+            var result = await AuthService.Register(requestDTO);
+
+            result.StatusCode.Should().Be(409);
+        }
         public async Task RefreshToken_ShouldReturnCorrectResponse()
         {
             string email = "someEmail@mail.com";

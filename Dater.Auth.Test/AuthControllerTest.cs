@@ -6,12 +6,6 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dater.Auth.Test
 {
@@ -126,6 +120,31 @@ namespace Dater.Auth.Test
             value.Email.Should().Be(requestDTO.Email);
             value.AccessToken.Should().NotBeNullOrEmpty();
             value.RefreshToken.Should().NotBeNullOrEmpty();
+        }
+
+        [Fact]
+        public async Task Register_ShouldReturn409Error_UserAlreadyExist()
+        {
+            AccountRequestDTO requestDTO = new AccountRequestDTO()
+            {
+                Email = "someEmail@mail.com",
+                Password = "password1234"
+            };
+
+            _authService
+                .Setup(x => x.Register(It.IsAny<AccountRequestDTO>()))
+                .ReturnsAsync(Result<AccountResponseDTO>.OnError(409, "User already exist"));
+
+            AuthController authController = new AuthController(_authService.Object, _logger.Object);
+
+            var result = await authController.Register(requestDTO);
+
+            result.Result.Should().BeOfType<ConflictObjectResult>();
+
+            var value = (result.Result as ConflictObjectResult)?.Value;
+
+            value.Should().NotBeNull();
+            value.Should().Be("User with this email already exists.");
         }
 
         [Fact]

@@ -149,6 +149,14 @@ namespace Dater.Auth.Application.Services
                 return Result<AccountResponseDTO>.OnError(400, "Email and password cannot be empty.");
             }
 
+            Result<Account> existingAccount = await _accountRepository.GetByEmailAsync(accountRequestDTO.Email);
+
+            if (existingAccount.StatusCode == 200) 
+            {
+                _logger.LogError("Account with email {Email} already exists.", accountRequestDTO.Email);
+                return Result<AccountResponseDTO>.OnError(409, "Account with this email already exists.");
+            }
+
             Account account = new Account
             {
                 Email = accountRequestDTO.Email,
