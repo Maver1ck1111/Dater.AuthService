@@ -8,7 +8,7 @@ namespace Dater.Auth.Application.ServicesContracts
 {
     public interface IJWTService
     {
-        string GenerateToken(string email);
+        string GenerateToken(string email, Guid accountID);
         string GenerateRefreshToken();
     }
 }

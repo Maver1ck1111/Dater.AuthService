@@ -35,11 +35,12 @@ namespace Dater.Auth.Application.Services
             return Convert.ToBase64String(randomBytes);
         }
 
-        public string GenerateToken(string email)
+        public string GenerateToken(string email, Guid accountID)
         {
             Claim[] claims = new Claim[]
             {
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Sub, accountID.ToString()),
                 new Claim(ClaimTypes.Email, email)
             };
 

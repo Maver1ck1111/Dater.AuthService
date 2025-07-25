@@ -9,17 +9,22 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Dater.Auth/Dater.Auth.csproj", "Dater.Auth/"]
-RUN dotnet restore "./Dater.Auth/Dater.Auth.csproj"
+COPY ["Dater.Auth/Dater.Auth.WebApi.csproj", "Dater.Auth/"]
+RUN dotnet restore "./Dater.Auth/Dater.Auth.WebApi.csproj"
 COPY . .
 WORKDIR "/src/Dater.Auth"
-RUN dotnet build "./Dater.Auth.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./Dater.Auth.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Dater.Auth.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Dater.Auth.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Dater.Auth.dll"]
+ENV AuthDbHost=localhost
+ENV AuthDbPort=5432
+ENV AuthDbUsername=postgres
+ENV AuthDbPassword=1234
+ENV AuthDbName=Accounts
+ENTRYPOINT ["dotnet", "Dater.Auth.WebApi.dll"]

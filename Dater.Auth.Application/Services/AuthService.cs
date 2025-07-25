@@ -56,7 +56,7 @@ namespace Dater.Auth.Application.Services
             }
 
             string refreshToken = _jwtService.GenerateRefreshToken();
-            string jwtToken = _jwtService.GenerateToken(resultAccount.Value.Email);
+            string jwtToken = _jwtService.GenerateToken(resultAccount.Value.Email, resultAccount.Value.AccountID);
 
             Account updatedAccount = resultAccount.Value;
             updatedAccount.RefreshToken = refreshToken;
@@ -113,7 +113,7 @@ namespace Dater.Auth.Application.Services
             _logger.LogInformation("Refreshing tokens for user {Email}.", email);
 
             string newRefreshToken = _jwtService.GenerateRefreshToken();
-            string jwtToken = _jwtService.GenerateToken(email);
+            string jwtToken = _jwtService.GenerateToken(email, resultAccount.Value.AccountID);
 
             Account updatedAccount = resultAccount.Value;
             updatedAccount.RefreshToken = refreshToken;
@@ -173,7 +173,7 @@ namespace Dater.Auth.Application.Services
                 return Result<AccountResponseDTO>.OnError(result.StatusCode, result.ErrorMessage);
             }
 
-            string jwtToken = _jwtService.GenerateToken(account.Email);
+            string jwtToken = _jwtService.GenerateToken(account.Email, account.AccountID);
 
             return Result<AccountResponseDTO>.OnSuccess(new AccountResponseDTO
             {
